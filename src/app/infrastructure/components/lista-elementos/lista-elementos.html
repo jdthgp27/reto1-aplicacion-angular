@@ -1,0 +1,40 @@
+<section class="contenedor">
+  <h1>📋 Lista de Elementos</h1>
+
+  <form (ngSubmit)="agregar()" class="formulario">
+    <input
+      type="text"
+      [(ngModel)]="nuevoNombre"
+      name="nuevoNombre"
+      placeholder="Escribe un nuevo elemento..."
+      autocomplete="off"
+      maxlength="100"
+    />
+    <button type="submit" [disabled]="!nuevoNombre().trim()">
+      Agregar
+    </button>
+  </form>
+
+  <p *ngIf="cargando()" class="estado">Cargando...</p>
+  <p *ngIf="error()" class="error">{{ error() }}</p>
+
+  <ul class="lista" *ngIf="!cargando() && elementos().length > 0; else vacio">
+    <li *ngFor="let elemento of elementos(); trackBy: trackById" class="item">
+      <div class="info">
+        <span class="nombre">{{ elemento.nombre }}</span>
+        <small class="fecha">{{ elemento.creadoEn | date: 'short' }}</small>
+      </div>
+      <button
+        class="btn-eliminar"
+        (click)="eliminar(elemento.id)"
+        title="Eliminar"
+      >
+        ✖
+      </button>
+    </li>
+  </ul>
+
+  <ng-template #vacio>
+    <p class="estado">No hay elementos aún. ¡Agrega el primero!</p>
+  </ng-template>
+</section>

@@ -1,0 +1,99 @@
+.contenedor {
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.formulario {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.formulario input {
+  flex: 1;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.formulario button {
+  padding: 0.6rem 1.2rem;
+  background: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.formulario button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.nombre {
+  font-weight: 500;
+  color: #34495e;
+}
+
+.fecha {
+  color: #95a5a6;
+  font-size: 0.75rem;
+}
+
+.btn-eliminar {
+  background: transparent;
+  border: none;
+  color: #e74c3c;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}
+
+.estado {
+  text-align: center;
+  color: #7f8c8d;
+  padding: 1rem 0;
+}
+
+.error {
+  color: #e74c3c;
+  text-align: center;
+  background: #fdecea;
+  padding: 0.5rem;
+  border-radius: 6px;
+}
